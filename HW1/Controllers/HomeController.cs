@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using HW1.Models;
 
 namespace HW1.Controllers
 {
@@ -10,6 +11,12 @@ namespace HW1.Controllers
     {
         public ActionResult Index()
         {
+            var myData = new HomeViewModel
+            {
+                PhoneCount = 10,
+                UserCount = 15,
+                LastAccessDate = DateTime.Now
+            };
             return View();
         }
 
